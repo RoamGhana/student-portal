@@ -4,7 +4,7 @@
     <title>@yield('title', 'Student Portal')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="/build/assets/app-{{ app()->environment() }}.css">
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         th { background: #e3342f; color: white; padding: 12px 16px; text-align: left; }
