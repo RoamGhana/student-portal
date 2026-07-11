@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <head>
     <title>@yield('title', 'Student Portal')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/base.css">
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        th { background: #e3342f; color: white; padding: 12px 16px; text-align: left; }
-        td { padding: 12px 16px; border-bottom: 1px solid #eee; }
+        th { background: #e3342f; color: white; padding: 12px 16px; text-align: left; font-size: 13px; }
+        td { padding: 10px 16px; border-bottom: 1px solid #eee; font-size: 13px; }
         .actions a { margin-right: 10px; text-decoration: none; font-size: 13px; }
         .edit { color: #2196F3; }
         .delete { color: #e53935; }
         .alert-success { background: #e6ffed; border: 1px solid #4CAF50; color: #2e7d32; padding: 12px 16px; border-radius: 6px; margin-bottom: 20px; }
         .empty { text-align: center; padding: 40px; color: #888; background: white; border-radius: 8px; }
         .error { color: #e53935; font-size: 13px; margin-bottom: 12px; }
+        @media (max-width: 640px) {
+            table { display: block; overflow-x: auto; white-space: nowrap; }
+            .hide-mobile { display: none; }
+        }
     </style>
+</head>
 </head>
 <body class="bg-gray-100 font-sans">
     <nav class="bg-red-600 text-white px-8 py-4 flex justify-between items-center shadow">
