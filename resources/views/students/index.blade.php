@@ -99,4 +99,7 @@
         searchInput.addEventListener('input', filterStudents);
         filterSelect.addEventListener('change', filterStudents);
     </script>
+    <div class="mt-4">
+    {{ $students->links() }}
+</div>
 @endsection

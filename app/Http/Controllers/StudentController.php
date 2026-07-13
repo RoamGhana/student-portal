@@ -21,7 +21,7 @@ class StudentController extends Controller
             $query->where('average', '<', 50);
         }
 
-        $students = $query->orderBy('average', 'desc')->get();
+        $students = $query->orderBy('average', 'desc')->paginate(20);
         $average = $students->avg('average');
 
         return view('students.index', compact('students', 'average'));
